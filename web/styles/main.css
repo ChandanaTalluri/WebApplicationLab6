@@ -1,0 +1,89 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 20, 2020, 11:13:44 AM
+    Author     : 0809379
+*/
+
+body { 
+    font-family: Arial, Helvetica, sans-serif;
+    background-size: cover;
+    position : relative;
+}
+h1{
+    color:red;
+}
+h2 {     
+    color: black;  
+}
+h3 {     
+    color: yellow;  
+}
+label {
+    float: left;
+    width: 7em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+span {
+    margin-left: 0.5em;    
+    margin-bottom: 0.5em;    
+}
+br {
+    clear: both;
+}
+
+/* The styles for the classes */
+.pad_top {
+    
+    color: black;
+}
+.margin_left {
+    margin-left: 0.5em;
+}
+/* The styles for the tables */
+/*table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 50em;
+}*/
+th, td {
+    
+    text-align: left;
+    padding: 5px;
+    font-size: 150%;
+    
+}
+.reg_tb{
+    text-align: left;
+    padding: 5px;
+    font-size: 100%;
+}
+.right {
+    text-align: right;
+}
+
+
+.tb_data{
+    color:red;
+}
+
+.formate_log{
+  text-align: center;
+  color: white;
+  width: 500em;
+      
+}
+
+.title{
+    text-align: center;
+  color: red;
+  font-style: italic;
+  font-size: 350%;
+  
+}
+
+.dollar:before{content:'$';}
