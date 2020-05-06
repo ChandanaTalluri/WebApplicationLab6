@@ -1,6 +1,6 @@
 /*
  * Created by Chandana Talluri
-* this file handles login operations
+* this file used to show account details for Admin and Mgt
  */
 package servlet;
 

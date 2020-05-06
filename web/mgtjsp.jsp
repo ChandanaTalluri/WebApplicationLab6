@@ -1,7 +1,8 @@
 <%-- 
     Document   : adminBank
     Created on : May 4, 2020, 9:20:34 PM
-    Author     : gorilla
+    Author     : Chandana
+    UI for Mgt
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -15,6 +16,18 @@
     </head>
     <body style=" background-image: url(images/other4.jpg)">
         <h1>Welcome Mgt<spam></spam></h1>
+        <div class= "row">
+            <div class="col-md-2"></div>
+            <div class="col-md-5"></div>
+            <div class="col-md-3">
+                 
+                <form action="index.html" method="post">
+                        <input type="hidden" name="action" value="join">
+                        <input type="submit" value="Logout">
+                </form>
+          
+            </div>
+        </div>   
         <br>
         <br>
         <h2> To view account details</h2>

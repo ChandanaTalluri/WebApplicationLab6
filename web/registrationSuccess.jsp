@@ -1,7 +1,8 @@
 <%-- 
     Document   : login
     Created on : Feb 20, 2020, 11:09:17 AM
-    Author     : 0809379
+    Author     : Chandana
+    Shows user details after successful registration
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

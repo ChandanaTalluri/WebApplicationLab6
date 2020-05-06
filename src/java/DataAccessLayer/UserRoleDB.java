@@ -1,11 +1,10 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Created by Chandana
+ * this files handles all the operations related to User role table
  */
 package DataAccessLayer;
 
-import BankingDomain.Customer;
+
 import BankingDomain.UserRole;
 import BankingExceptions.RecordsNotFoundException;
 import javax.persistence.EntityManager;
@@ -18,34 +17,8 @@ import javax.persistence.TypedQuery;
  * @author gorilla
  */
 public class UserRoleDB {
-    public static UserRole findUserRoles(String userID) throws RecordsNotFoundException{
-        UserRole objUserRole = new UserRole();
-        EntityManager objEntity = BankingDBConnect.getEntityManager().createEntityManager();
-        try{
-             //this method is used to find user id
-           
-            System.out.println("Entity " +objEntity);
-            String sql = "Select  c " 
-                    + "from UserRole c where c.userRole = :u";
-            System.out.println("SQl Customer DA " +sql);
-            TypedQuery<UserRole> query = objEntity.createQuery(sql,UserRole.class);
-                    query.setParameter("u", userID);
-            objUserRole = query.getSingleResult();
-         
-            System.out.println("objUserRole DA print"+objUserRole);
-        }catch(NoResultException e){
-             System.out.println(e.getMessage());
-        }catch(Exception e){
-            System.out.println(e.getMessage());
-        }
-        finally{
-            objEntity.close();
-        }
-        
-        return objUserRole;
-    }
-  
-  
+    //This method is used to Update UserRole
+    
    public static String UpdateUserRole(UserRole objUserRole){
        EntityManager objEntity = BankingDBConnect.getEntityManager().createEntityManager();
        EntityTransaction objEntityTran = objEntity.getTransaction();
@@ -84,6 +57,7 @@ public class UserRoleDB {
        }
         return strMessage;
    }
+   //This method is used to insert user role
     public static void insertUserRole(UserRole objUserRole){
        EntityManager objEntity = BankingDBConnect.getEntityManager().createEntityManager();
        EntityTransaction objEntityTran = objEntity.getTransaction();

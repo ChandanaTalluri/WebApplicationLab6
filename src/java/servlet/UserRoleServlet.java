@@ -1,17 +1,13 @@
 /*
  * Created by Chandana Talluri
-* this file handles login operations
+* this file handles Add and Update operations of UserRole table
  */
 package servlet;
 
-import BankingDomain.Account;
-import BankingDomain.AssetAccount;
+
 import BankingDomain.Customer;
-import BankingDomain.LiabilityAccount;
 import BankingDomain.UserRole;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;

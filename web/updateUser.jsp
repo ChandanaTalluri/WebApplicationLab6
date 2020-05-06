@@ -1,7 +1,8 @@
 <%-- 
     Document   : updateUser
     Created on : May 4, 2020, 9:29:08 PM
-    Author     : gorilla
+    Author     : Chandana
+    UI to update User details will be populated with current values and are editable except CustID
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

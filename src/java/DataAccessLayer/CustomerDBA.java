@@ -8,11 +8,6 @@ package DataAccessLayer;
 import BankingDomain.Customer;
 import BankingExceptions.LoginException;
 import BankingExceptions.RecordsNotFoundException;
-
-//import java.sql.Connection;
-//import java.sql.ResultSet;
-//import java.sql.Statement;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.NoResultException;
@@ -55,7 +50,7 @@ public class CustomerDBA {
         
         return objCustomer;
     }
-  
+  //This method is used to check user login
    public static Customer checklogin(String userID, String password) throws LoginException{
         Customer objCustomer = new Customer(); ;
         try{
@@ -74,6 +69,7 @@ public class CustomerDBA {
         }
         
     }
+   // this method is used to check whether user alredy exists or not before inserting
     public static Customer checkUserID(String userID) throws LoginException{
      
         Customer objCustomer = new Customer();
@@ -129,6 +125,7 @@ public class CustomerDBA {
         }
         return custID;
    }
+   //This method is used to update Customer details
    public static Customer UpdateCustomer(Customer objnewCustomer) throws LoginException{
        EntityManager objEntity = BankingDBConnect.getEntityManager().createEntityManager();
        EntityTransaction objEntityTran = objEntity.getTransaction();
@@ -172,6 +169,7 @@ public class CustomerDBA {
        }
        return objnewCustomer;
    }
+   // this method is used to check whether user alredy exists or not before updating
    public static Customer checkUserIDandCustID(String userID,int custID) throws LoginException{
      
         Customer objCustomer = new Customer();
