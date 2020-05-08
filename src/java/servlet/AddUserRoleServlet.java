@@ -1,6 +1,6 @@
 /*
  * Created by Chandana Talluri
-* this file handles Update operations of UserRole table
+* this file handles Add userrole to  UserRole table
  */
 package servlet;
 
@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 
-public class UserRoleServlet extends HttpServlet {
+public class AddUserRoleServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -40,16 +40,16 @@ public class UserRoleServlet extends HttpServlet {
                String userAccess = request.getParameter("userAccess");
                String accessRole = request.getParameter("access_userRole");
                UserRole objUserRole = new UserRole(userRole, accAccess.charAt(0), userAccess.charAt(0), accessRole.charAt(0));
-               String strMessage = UserRole.updateUserRole(objUserRole);
+               String strMessage = UserRole.insertUserRole(objUserRole);
             
             request.setAttribute("message", strMessage);
-            url = "/updateUserRole.jsp"; 
+            url = "/addUserRole.jsp"; 
 
             getServletContext()
             .getRequestDispatcher(url)
             .forward(request, response);
            }catch(Exception e){
-               url ="/updateUserRole.jsp";
+               url ="/addUserRole.jsp";
                request.setAttribute("message", e.getMessage());
               // HttpSession session = request.getSession();
                session.setAttribute("message", e.getMessage());

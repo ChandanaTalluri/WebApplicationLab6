@@ -15,13 +15,13 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="styles/main.css" type="text/css"/>
   <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-        <title>JSP Page</title>
+        <title>Update User</title>
     </head>
      <body  style=" background-image: url(images/other4.jpg)">
     <!--<body style="background-color: scrollbar">-->
 
     <div class="container text-center" > 
-        <br><br><br><br>
+        <br><br>
         <div class="title">
             <b>Easy Banking</b>
         </div>
@@ -44,8 +44,8 @@
                 </tr>
                 <tr>
                     <td><b>Customer ID</b></td>
-                    <td><input type="text" name="custID" required value=${customer.custID} readonly></td>
-                    <td><h5>This value is fixed</h5></td>
+                    <td><input type="text" name="custID" required value=${customer.custID} disabled></td>
+                    <td><input type="hidden" name="custID" required value=${customer.custID} </td>
                 </tr>
                 <tr>
                     <td><b>User ID</b></td>
@@ -72,14 +72,38 @@
                     <td><input type="password" name="strPassword" required value=${customer.strPassword}></td>
                 </tr>
                 <tr>
-                    <td><b>User Role:</b></td>
-                    <td><input type="text" name="strUserRole" required value=${customer.strUserRole}></td>
+                    <td><b>Current User Role:</b></td>
+                    <td><input type="text" name="strUserRole" value=${customer.strUserRole} disabled></td>
+                    <td><input type="hidden" name="strUserRole"  value=${customer.strUserRole}></td>
                 </tr>
-                <tr>
-                <td></td>
-                <td><input type="submit" value="Enter" class="margin_left"></td>
-            </tr>
             </table>
+                    <di style="text-align: left" >
+                        <h4>Please select below to change User Role:</h4>
+                    </di>
+                    
+                    <!-- <table>
+                        <tr>
+                            <td><input type="radio" name="Admin"  value="Admin"></td>
+                            <td><label for="Admin">Admin</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="Mgt"  value="Mgt"></td>
+                            <td><label for="Mgt">Mgt</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="User"  value="User"></td>
+                            <td><label for="User">User</label></td>
+                        </tr>
+                    </table> -->
+                    
+                    <p><input type="radio" name="Admin"  value="Admin">
+                      <label for="Admin">Admin</label><br></p>
+                    <p><input type="radio" name="Mgt"  value="Mgt">
+                    <label for="Mgt">Mgt</label> </p>
+                    <p><input type="radio" name="User"  value="User">
+                    <label for="User">User</label> </p>
+                   
+                    <input type="submit" value="Enter" class="margin_left">
        
     </form>
         </div>

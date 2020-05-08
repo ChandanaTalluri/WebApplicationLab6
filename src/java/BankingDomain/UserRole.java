@@ -6,6 +6,7 @@ package BankingDomain;
 
 
 import BankingExceptions.LoginException;
+import BankingExceptions.RecordsNotFoundException;
 import DataAccessLayer.CustomerDBA;
 import DataAccessLayer.UserRoleDB;
 import java.io.Serializable;
@@ -80,7 +81,10 @@ public class UserRole {
     }
       
   
-    public static String  updateUserRole(UserRole objUserRole){
+    public static String  updateUserRole(UserRole objUserRole) throws RecordsNotFoundException{
         return UserRoleDB.UpdateUserRole(objUserRole);
+    }
+    public static String  insertUserRole(UserRole objUserRole) throws RecordsNotFoundException{
+        return UserRoleDB.insertUserRole(objUserRole);
     }
 }

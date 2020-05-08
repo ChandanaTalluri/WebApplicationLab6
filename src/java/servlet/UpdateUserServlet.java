@@ -41,6 +41,16 @@ public class UpdateUserServlet extends HttpServlet {
         String strPassword = request.getParameter("strPassword");
         String strPhoneNumber = request.getParameter("strPhoneNumber");
         String strUserRole = request.getParameter("strUserRole");
+         strUserRole = request.getParameter("Admin");
+         if(null== strUserRole){
+             strUserRole = request.getParameter("Mgt");
+         }
+         if( null== strUserRole){
+             strUserRole = request.getParameter("User");
+         }
+         if(null== strUserRole){
+             strUserRole = request.getParameter("strUserRole");
+         }
         int custID = Integer.parseInt(request.getParameter("custID")) ;
 
         Customer objCustomer = new Customer(strUserID, strFirstName, strLastName, strEmailID, strPhoneNumber, strPassword, strUserRole);

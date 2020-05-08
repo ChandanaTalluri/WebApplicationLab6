@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--
 Created by Chandana.
-Template to update UserRole table
+Template to add UserRole table
 -->
 <html>
     <head>
@@ -30,7 +30,7 @@ Template to update UserRole table
             <div class="col-md-3"> </div>
             <div class="col-md-8">
                 <h3> <spam>${message}</spam> </h3> <!-- message will print login exception-->
-        <form action="UserRole" method="post">
+        <form action="addUserRole" method="post">
             <table class="reg_tb">
                 <tr>
                     <td></td>

@@ -72,7 +72,7 @@
             <table>
                 <tr>
                     <td><input type="submit" name ="register" value="Update Role" formaction="updateUserRole.jsp"></td>
-                    <td><input type="submit" name ="register" value="Add User Role" formaction="updateUserRole.jsp"></td>
+                    <td><input type="submit" name ="register" value="Add User Role" formaction="addUserRole.jsp"></td>
                 </tr>
             </table>
         </form> 
